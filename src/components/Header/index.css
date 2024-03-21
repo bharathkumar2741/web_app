@@ -1,0 +1,39 @@
+.header-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    color: #000000;
+    text-align: center;
+    
+}
+.form-search{
+
+}
+.main-heading{
+  color: #000000;
+  font-family: "Bre-seirf";
+  font-weight: 600;
+  
+
+}
+.form-container{
+
+}
+.each-image{
+  height:200px;
+  width: 200px;
+  margin: 5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+.img-container{
+margin-left: 8%;
+margin-right: 8%;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+
