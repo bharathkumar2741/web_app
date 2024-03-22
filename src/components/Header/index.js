@@ -55,8 +55,6 @@ const Header=()=>{
         fetchImages();
     }
 
-    const renderFailureView = () => {}
-
     const renderSuccessView = () => 
       
       (
@@ -83,8 +81,6 @@ const Header=()=>{
           return renderLoadingView()
         case apiStatusConstants.success:
           return renderSuccessView()
-        case apiStatusConstants.failure:
-          return renderFailureView()
         default:
           return null
       }
@@ -93,22 +89,24 @@ const Header=()=>{
         <div className='header-container'>
             <div className='form-container'>
                <h1 className="main-heading mb-3">Search Images</h1>
-               <Form onSubmit={onSubmitbutton}>
-                    <Form.Control className='form-search' type="search" placeholder="Type any thing..." ref={searchInput} />
+               <Form className='form-search' onSubmit={onSubmitbutton}>
+                    <Form.Control type="search" placeholder="Type any thing..." ref={searchInput} />
                 </Form>
                 <div className='pt-3'>
-                    <Button variant="primary" onClick={()=>buttonText("Animals")}>Animals</Button>{' '}
-                    <Button variant="secondary" onClick={()=>buttonText("Mountains")}>Mountains</Button>{' '}
-                    <Button variant="success" onClick={()=>buttonText("Trees")}>Trees</Button>{' '}
-                    <Button variant="warning" onClick={()=>buttonText("ELectronics")}>Electronics</Button>{' '}
-                    <Button variant="danger" onClick={()=>buttonText("Birds")}>Birds</Button>{' '}
-                    <Button variant="info" onClick={()=>buttonText("Mobiles")}>Mobiles</Button>{' '}
-                    <Button variant="dark" onClick={()=>buttonText("Houses")}>Houses</Button>{' '}
+                    <Button className='mb-3 mt-3' variant="primary" onClick={()=>buttonText("Animals")}>Animals</Button>{' '}
+                    <Button className='mb-3 mt-3' variant="secondary" onClick={()=>buttonText("Mountains")}>Mountains</Button>{' '}
+                    <Button className='mb-3 mt-3' variant="success" onClick={()=>buttonText("Trees")}>Trees</Button>{' '}
+                    <Button className='d mb-3 mt-3' variant="warning" onClick={()=>buttonText("ELectronics")}>Electronics</Button>{' '}
+                    <Button className='a mb-3 mt-3' variant="danger" onClick={()=>buttonText("Birds")}>Birds</Button>{' '}
+                    <Button className='b mb-3 mt-3' variant="info" onClick={()=>buttonText("Mobiles")}>Mobiles</Button>{' '}
+                    <Button className='c mb-3 mt-3' variant="dark" onClick={()=>buttonText("Houses")}>Houses</Button>{' '}
+                    
                 </div>
             </div>
+            <div className='responsive-container'>
             {renderLeaderboard()}
-            
+            </div>
         </div>
     )
-}
+} 
 export default Header;

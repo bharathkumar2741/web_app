@@ -10,6 +10,7 @@
     
 }
 .form-search{
+  flex-shrink: 1;
 
 }
 .main-heading{
@@ -20,6 +21,7 @@
 
 }
 .form-container{
+  flex-wrap: wrap;
 
 }
 .each-image{
@@ -34,6 +36,25 @@ margin-left: 8%;
 margin-right: 8%;
 padding-top: 20px;
 padding-bottom: 20px;
+flex-wrap: wrap;
 }
 
 
+@media screen and (max-width: 600px) {
+  .form-search{
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .a{
+    display: none;
+  }
+  .b{
+    display: none;
+  }
+  .c{
+    display: none;
+  }
+  .d{
+    display: none;
+  }
+}
